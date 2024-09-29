@@ -44,15 +44,7 @@ Ce bot Discord permet de vérifier si les membres d'un serveur ont une adresse e
    python bot.py
    ```
 
-## Utilisation
-
-### Commandes Principales
-
-- **`!verif`** : L'utilisateur lance la procédure de vérification de son adresse e-mail. Le bot envoie un code de vérification à l'adresse fournie par l'utilisateur.
-- **`!help`** : Affiche la liste des commandes disponibles.
-- **`!delete [email]`** *(Administrateurs uniquement)* : Supprime un utilisateur de la liste des e-mails vérifiés.
-
-## Utilisation avec Docker
+## Installation avec Docker
 
 Vous pouvez également exécuter ce bot en utilisant Docker et Docker Compose.
 
@@ -80,6 +72,16 @@ Vous pouvez également exécuter ce bot en utilisant Docker et Docker Compose.
    ```bash
    docker-compose up -d
    ```
+
+
+
+## Utilisation
+
+### Commandes Principales
+
+- **`!verif`** : L'utilisateur lance la procédure de vérification de son adresse e-mail. Le bot envoie un code de vérification à l'adresse fournie par l'utilisateur.
+- **`!help`** : Affiche la liste des commandes disponibles.
+- **`!delete [email]`** *(Administrateurs uniquement)* : Supprime un utilisateur de la liste des e-mails vérifiés.
 
 
 ## To-Do
