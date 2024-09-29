@@ -23,8 +23,5 @@ COPY --from=builder /install /usr/local
 # Copier les fichiers de l'application
 COPY . .
 
-# Exposer le port 8080
-ENV PORT=8080
-
 # Démarrer le bot
 CMD ["python", "main.py"]
