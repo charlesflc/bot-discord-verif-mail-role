@@ -1,0 +1,4 @@
+discord.py
+nest_asyncio
+email-validator
+python-dotenv
