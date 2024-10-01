@@ -54,19 +54,21 @@ Vous pouvez également exécuter ce bot en utilisant Docker et Docker Compose.
    ```yaml
    services:
      discord-bot:
-       image: ghcr.io/charlesflc/bot-discord-verif-mail-role:latest 
+       image: ghcr.io/charlesflc/bot-discord-verif-mail-role:latest
        container_name: discord-bot
-       environment:
-         DISCORD_TOKEN: "VotreTokenDiscord"
-         SMTP_SERVER: "smtp.domain.tldr"
-         SMTP_PORT: "587"
-         SMTP_EMAIL: "VotreEmail@domain.tldr"
-         SMTP_PASSWORD: "VotreMotDePasse"
-         CSV_FILE: "/data/verified_emails.csv"
-       volumes:
-         - ./data:/data
        restart: unless-stopped
-   ```
+       environment:
+         DISCORD_TOKEN: "VOTRE_DISCORD_TOKEN"          # Remplacez par votre token Discord
+         SMTP_SERVER: "smtp.example.com"              # Remplacez par le serveur SMTP
+         SMTP_PORT: "587"                             # Remplacez par le port SMTP
+         SMTP_EMAIL: "votre-email@example.com"        # Remplacez par l'adresse e-mail SMTP
+         SMTP_PASSWORD: "votre-mot-de-passe-smtp"     # Remplacez par votre mot de passe SMTP
+         CSV_FILE: "/data/verified_emails.csv"        # Chemin du fichier CSV où les e-mails vérifiés seront stockés
+         ROLE_NAME: "verified"                        # Nom du rôle à attribuer aux membres vérifiés
+         MAIL_DOMAIN: "example.com"                   # Domaine de l'adresse e-mail
+       volumes:
+         - ./data:/data  # Monte le répertoire local ./data à /data dans le conteneur pour stocker verified_emails.csv
+      ```
 
 2. **Lancez le conteneur Docker** :
    ```bash
