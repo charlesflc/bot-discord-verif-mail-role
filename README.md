@@ -37,6 +37,8 @@ Ce bot Discord permet de vérifier si les membres d'un serveur ont une adresse e
    SMTP_EMAIL=VotreEmail@domain.tldr
    SMTP_PASSWORD=VotreMotDePasse
    CSV_FILE=./verified_emails.csv
+   ROLE_NAME=verified_role
+   MAIL_DOMAIN=example.com
    ```
 
 4. Lancez le bot :
